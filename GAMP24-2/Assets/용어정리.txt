@@ -1,0 +1,32 @@
+[유니티]
+인스펙터: 게임오브젝트의 정보를 확인하는 창
+게임오브젝트:
+에셋:
+하이어라키:
+
+
+[컴포넌트]
+트랜스폼:
+스프라이트렌더러:
+스트립트:
+
+[유니티메세지]
+Start:
+Update:
+AWake:
+FixedUpdate:
+LateUpdate:
+OnTrigger:
+OnCollision:
+
+
+[스크립팅API]
+Input:
+
+[게임수학]
+
+
+[컴퓨터공학]
+ API(응용프로그램인터페이스):
+ 콜백:
+ inter-face
