@@ -74,3 +74,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /GAMP24-2/Library/PackageCache/com.unity.burst@1.8.16/.Runtime
+/GAMP24-2/Library
