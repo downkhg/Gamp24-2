@@ -24,13 +24,11 @@ public class Responner : MonoBehaviour
             curTime = 0;
         }
 
-
         if (curTime >= 0)
         {
             curTime += Time.deltaTime;
         }
 
-  
         if (curTime >= time)
         {
             Debug.Log($"objPlayerEnd");
