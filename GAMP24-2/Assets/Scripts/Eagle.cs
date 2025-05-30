@@ -23,9 +23,24 @@ public class Eagle : MonoBehaviour
         Vector3 vPos = this.transform.position;
 
         Vector3 vDist = vTargetPos - vPos;
-
         vDir = vDist.normalized;
 
-        transform.position += vDir * speed * Time.deltaTime;
+        float fDist = vDist.magnitude;
+        float fMoveFPS = speed * Time.deltaTime;
+
+        Debug.DrawLine(vPos,vPos + vDir * fMoveFPS);
+
+        if (fDist > fMoveFPS)
+            transform.position += vDir * speed * Time.deltaTime;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(collision.gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        objTarget = collision.gameObject;
     }
 }
