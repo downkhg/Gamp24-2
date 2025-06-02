@@ -5,9 +5,13 @@ using UnityEngine;
 public class Eagle : MonoBehaviour
 {
     public GameObject objTarget;
+    public float site;
 
     public float speed;
     public Vector3 vDir;
+
+    public Transform trRetrunPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,11 @@ public class Eagle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objTarget == null) return;
+        if (objTarget == null)
+        {
+            objTarget = trRetrunPoint.gameObject;
+            return;
+        }
 
         Vector3 vTargetPos = objTarget.transform.position;
         Vector3 vPos = this.transform.position;
@@ -34,6 +42,22 @@ public class Eagle : MonoBehaviour
             transform.position += vDir * speed * Time.deltaTime;
     }
 
+    private void FixedUpdate()
+    {
+        Collider2D collider = Physics2D.OverlapCircle(this.transform.position, site);
+
+        if(collider != null)
+        {
+            if (collider.tag == "Player")
+                objTarget = collider.gameObject;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(this.transform.position, site);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(collision.gameObject);
@@ -41,6 +65,7 @@ public class Eagle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        objTarget = collision.gameObject;
+        if(collision.tag == "Player")
+            objTarget = collision.gameObject;
     }
 }

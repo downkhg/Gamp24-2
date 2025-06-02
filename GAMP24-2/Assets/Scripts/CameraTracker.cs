@@ -17,7 +17,11 @@ public class CameraTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objTarget == null) return;
+        if (objTarget == null)
+        {
+            //objTarget = GameObject.FindWithTag("Player").gameObject;
+            return;
+        }
 
         Vector3 vTargetPos = objTarget.transform.position;
         Vector3 vPos = this.transform.position;
