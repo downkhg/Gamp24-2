@@ -61,6 +61,31 @@ public class Eagle : MonoBehaviour
             if (collider.tag == "Player")
                 objTarget = collider.gameObject;
         }
+
+        CircleCollider2D circleCollider = GetComponent<CircleCollider2D>();
+        collider = Physics2D.OverlapCircle(this.transform.position, circleCollider.radius);
+
+        if (circleCollider != null)
+        {
+            if (collider.tag == "Player")
+            {
+                Player playerTarget = collider.gameObject.GetComponent<Player>();
+                Player playerME = this.gameObject.GetComponent<Player>();
+
+                if (playerTarget && playerME)
+                {
+                    SuperMode superMode = collider.GetComponent<SuperMode>();
+
+                    if (!superMode.Use)
+                    {
+                        playerME.Attack(playerTarget);
+                        superMode.OnMode();
+                        if (playerTarget.Death())
+                            Destroy(collider.gameObject);
+                    }
+                }
+            }
+        }
     }
 
     private void OnDrawGizmos()
@@ -68,23 +93,30 @@ public class Eagle : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, site);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Player playerTarget = collision.gameObject.GetComponent<Player>();
-        Player playerME = this.gameObject.GetComponent<Player>();
-
-        if(playerTarget && playerME)
-        {
-            playerME.Attack(playerTarget);
-
-            if(playerTarget.Death())
-                Destroy(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Player")
-            objTarget = collision.gameObject;
+        {
+            Player playerTarget = collision.gameObject.GetComponent<Player>();
+            Player playerME = this.gameObject.GetComponent<Player>();
+
+            if (playerTarget && playerME)
+            {
+                SuperMode superMode = collision.GetComponent<SuperMode>();
+
+                if (!superMode.Use)
+                {
+                    playerME.Attack(playerTarget);
+                    playerME.nExp += playerTarget.nExp;
+                    superMode.OnMode();
+                    if (playerTarget.Death())
+                    {
+                        playerTarget.GetExp(playerTarget);
+                        playerTarget.LvUp();
+                        Destroy(collision.gameObject);
+                    }    
+                }
+            }
+        }
     }
 }

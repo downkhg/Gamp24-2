@@ -2118,6 +2118,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: eagle
       objectReference: {fileID: 0}
+    - target: {fileID: 763179357898992508, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
+      propertyPath: nExp
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 763179357898992508, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
+      propertyPath: nMaxExp
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1724792046124449964, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
       propertyPath: trPatrolPoint
       value: 
@@ -2358,7 +2366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004081716679168668, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
       propertyPath: m_Name
-      value: player-idle-1
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147069415479882599, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: nLv
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2375,7 +2387,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 207055684455079470, guid: 68ae5bdb949ab8f4597b2e332db2616a, type: 3}
       propertyPath: m_Name
-      value: opossum-1
+      value: opossum
       objectReference: {fileID: 0}
     - target: {fileID: 4471924975163519307, guid: 68ae5bdb949ab8f4597b2e332db2616a, type: 3}
       propertyPath: m_LocalPosition.x
