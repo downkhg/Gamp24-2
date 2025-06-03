@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4389452493033247877}
   - component: {fileID: 1724792046124449964}
   - component: {fileID: 7219159821857228818}
+  - component: {fileID: 763179357898992508}
   m_Layer: 0
   m_Name: eagle
   m_TagString: Untagged
@@ -102,6 +103,8 @@ MonoBehaviour:
   site: 3
   speed: 3
   vDir: {x: 0, y: 0, z: 0}
+  trRetrunPoint: {fileID: 0}
+  trPatrolPoint: {fileID: 0}
 --- !u!58 &7219159821857228818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +140,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &763179357898992508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100157872771388653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fec8c862ab3de4faf8b0d4616ecf09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nHP: 50
+  nDemage: 20
+  idx: 1

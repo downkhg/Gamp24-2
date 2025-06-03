@@ -588,6 +588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTracker: {fileID: 519420033}
   responnerPlayer: {fileID: 643504158}
+  responnerEagle: {fileID: 1172005298}
+  responnerOpossum: {fileID: 434638065}
 --- !u!4 &633801218
 Transform:
   m_ObjectHideFlags: 0
@@ -2116,6 +2118,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: eagle
       objectReference: {fileID: 0}
+    - target: {fileID: 1724792046124449964, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
+      propertyPath: trPatrolPoint
+      value: 
+      objectReference: {fileID: 434638067}
+    - target: {fileID: 1724792046124449964, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
+      propertyPath: trRetrunPoint
+      value: 
+      objectReference: {fileID: 1172005300}
     - target: {fileID: 3139075862909818126, guid: 01a365f118726d448bed94ecaa5ed9fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.37

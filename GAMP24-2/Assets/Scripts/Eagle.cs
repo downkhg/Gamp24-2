@@ -12,6 +12,8 @@ public class Eagle : MonoBehaviour
 
     public Transform trRetrunPoint;
 
+    public Transform trPatrolPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,14 @@ public class Eagle : MonoBehaviour
 
         if (fDist > fMoveFPS)
             transform.position += vDir * speed * Time.deltaTime;
+        else
+        {
+            if (objTarget.gameObject.name == trRetrunPoint.name)
+                objTarget = trPatrolPoint.gameObject;
+
+            else if (objTarget.gameObject.name == trPatrolPoint.name)
+                objTarget = trRetrunPoint.gameObject;
+        }
     }
 
     private void FixedUpdate()
@@ -60,7 +70,16 @@ public class Eagle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
+        Player playerTarget = collision.gameObject.GetComponent<Player>();
+        Player playerME = this.gameObject.GetComponent<Player>();
+
+        if(playerTarget && playerME)
+        {
+            playerME.Attack(playerTarget);
+
+            if(playerTarget.Death())
+                Destroy(collision.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
