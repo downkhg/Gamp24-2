@@ -42,10 +42,14 @@ public class Player : MonoBehaviour
     public int idx;
     private void OnGUI()
     {
-        GUI.Box(new Rect(100*idx, 0, 100, 20), $"{gameObject.name}[{nLv}]");
-        GUI.Box(new Rect(100 * idx, 20, 100, 20), $"Atk:{nDemage}");
-        GUI.Box(new Rect(100 * idx, 40, 100, 20), $"HP: {nHP}");
-        GUI.Box(new Rect(100 * idx, 60, 100, 20), $"Exp: {nExp}/{nMaxExp}");
+        int w = 100;
+        int h = 20;
+        int y = 0;
+
+        GUI.Box(new Rect(w*idx, h*y, w, h), $"{gameObject.name}[{nLv}]"); y++;
+        GUI.Box(new Rect(w * idx, h*y, w, h), $"Atk:{nDemage}"); y++;
+        GUI.Box(new Rect(w * idx, h*y, w, h), $"HP: {nHP}"); y++;
+        GUI.Box(new Rect(w * idx, h*y, w, h), $"Exp: {nExp}/{nMaxExp}"); y++;
     }
 
     // Start is called before the first frame update

@@ -42,7 +42,7 @@ public class Eagle : MonoBehaviour
 
         if (fDist > fMoveFPS)
             transform.position += vDir * speed * Time.deltaTime;
-        else
+        else //이동이 끝났을때
         {
             if (objTarget.gameObject.name == trRetrunPoint.name)
                 objTarget = trPatrolPoint.gameObject;
@@ -107,14 +107,13 @@ public class Eagle : MonoBehaviour
                 if (!superMode.Use)
                 {
                     playerME.Attack(playerTarget);
-                    playerME.nExp += playerTarget.nExp;
                     superMode.OnMode();
                     if (playerTarget.Death())
                     {
-                        playerTarget.GetExp(playerTarget);
-                        playerTarget.LvUp();
+                        playerME.GetExp(playerTarget);
+                        playerME.LvUp();
                         Destroy(collision.gameObject);
-                    }    
+                    }
                 }
             }
         }

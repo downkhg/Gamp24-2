@@ -2325,6 +2325,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1499938738404195598, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499938738404195598, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
       objectReference: {fileID: 0}
@@ -2368,8 +2372,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4176375998503496708, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: prefabBullet
+      value: 
+      objectReference: {fileID: 6368141909200378722, guid: 1486ab993f332a246983dcedea5c7d43, type: 3}
+    - target: {fileID: 6528296943984396806, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8147069415479882599, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
       propertyPath: nLv
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963632137088020704, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: vDir.x
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

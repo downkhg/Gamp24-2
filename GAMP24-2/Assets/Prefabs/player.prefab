@@ -105,6 +105,8 @@ MonoBehaviour:
   speed: 5
   jumpPower: 450
   score: 0
+  gun: {fileID: 4176375998503496708}
+  vDir: {x: 1, y: 0, z: 0}
 --- !u!58 &7438011330735918206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -184,7 +186,7 @@ MonoBehaviour:
   nLv: 0
   nExp: 10
   nMaxExp: 100
-  idx: 0
+  idx: 1
 --- !u!114 &-813484460940002277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +259,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208169e04b3926c4995c44cd201ccb32, type: 3}
+--- !u!114 &4176375998503496708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3135182610928301715, guid: 208169e04b3926c4995c44cd201ccb32, type: 3}
+  m_PrefabInstance: {fileID: 1330550007234321047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653802a4d8fd8da468e55e84e0229d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7403478874535925162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8415363899205537597, guid: 208169e04b3926c4995c44cd201ccb32, type: 3}
