@@ -570,8 +570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Cherry
-  score: 1
+  ItemData:
+    name: 
+    score: 0
 --- !u!1 &633801216
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +607,12 @@ MonoBehaviour:
   responnerPlayer: {fileID: 643504158}
   responnerEagle: {fileID: 1172005298}
   responnerOpossum: {fileID: 434638065}
+  itemDataManager: {fileID: 633801219}
+  listItems:
+  - {fileID: 609651577}
+  - {fileID: 1527575654}
+  - {fileID: 1982076245}
+  - {fileID: 1680459782}
 --- !u!4 &633801218
 Transform:
   m_ObjectHideFlags: 0
@@ -633,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ca3c5bd754d2340a8b5672c5e1f2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listItems: []
+  listItemDatas: []
 --- !u!1 &643504155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1495,7 @@ GameObject:
   - component: {fileID: 1527575651}
   - component: {fileID: 1527575654}
   m_Layer: 1
-  m_Name: cherry (1)
+  m_Name: cherry
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1625,8 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Cherry
-  score: 1
+  ItemData:
+    name: 
+    score: 0
 --- !u!1 &1566742183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1791,7 @@ GameObject:
   - component: {fileID: 1680459779}
   - component: {fileID: 1680459782}
   m_Layer: 0
-  m_Name: gem-1
+  m_Name: gem
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1921,8 +1929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Gem
-  score: 10
+  ItemData:
+    name: 
+    score: 0
 --- !u!1 &1741101808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4004081716679168668, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
@@ -2237,7 +2246,7 @@ GameObject:
   - component: {fileID: 1982076242}
   - component: {fileID: 1982076245}
   m_Layer: 1
-  m_Name: cherry (2)
+  m_Name: cherry
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2374,8 +2383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Cherry
-  score: 1
+  ItemData:
+    name: 
+    score: 0
 --- !u!1001 &268031096817920826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2384,6 +2394,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 632634174483886576, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
+      propertyPath: idx
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1499938738404195598, guid: 033760ad1e00c5c43b6a1d61e43aec4d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

@@ -9,10 +9,20 @@ public class GameManager : MonoBehaviour
     public Responner responnerEagle;
     public Responner responnerOpossum;
 
+    public ItemDataManager itemDataManager;
+
+    public List<Item> listItems;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        itemDataManager.Init();
+
+        for (int i = 0; i < listItems.Count; i++)
+        {
+            ItemData itemData = itemDataManager.Find(listItems[i].gameObject.name);
+            listItems[i].ItemData = itemData;
+        }
     }
 
     // Update is called once per frame

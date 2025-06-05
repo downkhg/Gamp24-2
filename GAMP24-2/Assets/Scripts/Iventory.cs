@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Iventory : MonoBehaviour
 {
-    public List<Item> listItems;
+    public List<ItemData> listItems;
 
-    public void SetItem(Item item)
+    public void SetItem(ItemData item)
     {
         listItems.Add(item);
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(ItemData item)
     {
         listItems.Remove(item);
     }
 
-    int idx;
+    public int idx;
 
     private void OnGUI()
     {
