@@ -158,7 +158,7 @@ MonoBehaviour:
   nLv: 0
   nExp: 50
   nMaxExp: 100
-  idx: 2
+  idx: 3
 --- !u!114 &-1332794058448492571
 MonoBehaviour:
   m_ObjectHideFlags: 0

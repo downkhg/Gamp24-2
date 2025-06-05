@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 609651576}
   - component: {fileID: 609651575}
   - component: {fileID: 609651574}
+  - component: {fileID: 609651577}
   m_Layer: 1
   m_Name: cherry
   m_TagString: Item
@@ -557,6 +558,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &609651577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609651573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cherry
+  score: 1
 --- !u!1 &633801216
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633801218}
   - component: {fileID: 633801217}
+  - component: {fileID: 633801219}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -605,6 +621,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &633801219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633801216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ca3c5bd754d2340a8b5672c5e1f2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listItems: []
 --- !u!1 &643504155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1486,7 @@ GameObject:
   - component: {fileID: 1527575653}
   - component: {fileID: 1527575652}
   - component: {fileID: 1527575651}
+  - component: {fileID: 1527575654}
   m_Layer: 1
   m_Name: cherry (1)
   m_TagString: Item
@@ -1583,6 +1613,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527575654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527575650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cherry
+  score: 1
 --- !u!1 &1566742183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Gem
   score: 10
 --- !u!1 &1741101808 stripped
 GameObject:
@@ -2190,6 +2235,7 @@ GameObject:
   - component: {fileID: 1982076244}
   - component: {fileID: 1982076243}
   - component: {fileID: 1982076242}
+  - component: {fileID: 1982076245}
   m_Layer: 1
   m_Name: cherry (2)
   m_TagString: Item
@@ -2316,6 +2362,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982076245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982076241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cadda6690137b49a455467190ea740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cherry
+  score: 1
 --- !u!1001 &268031096817920826
 PrefabInstance:
   m_ObjectHideFlags: 0
