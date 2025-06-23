@@ -13,10 +13,25 @@ public class GameManager : MonoBehaviour
 
     public List<Item> listItems;
 
+    public GUIIventory guiIventory;
+
+    public static GameManager instacne;
+
+
+    private void Awake()
+    {
+        instacne = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         itemDataManager.Init();
+        
+        Iventory iventory = responnerPlayer.objPlayer.GetComponent<Iventory>();
+        guiIventory.Set(iventory);
+
+        iventory.InitChitItem(itemDataManager);
 
         for (int i = 0; i < listItems.Count; i++)
         {
